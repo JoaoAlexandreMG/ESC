@@ -1,15 +1,14 @@
-`include "fulladder.v"
+`include "modules/fulladder.v"
 
 module inc16 (
-    input [15:0] A,    // Número de 16 bits
-    output [15:0] Sum, // Resultado da soma
-    output Cout        // Carry-out final
+    input [15:0] A, 
+    output [15:0] Sum, 
+    output Cout      
 );
 
-    wire [15:0] carry; // Fios de carry entre os full adders
+    wire [15:0] carry; 
     
-    // Instanciando 16 full adders
-    fulladder fa0 (A[0], 1'b1, 1'b0, Sum[0], carry[0]);  // Carry-in inicial em 1
+    fulladder fa0 (A[0], 1'b1, 1'b0, Sum[0], carry[0]);  
     fulladder fa1 (A[1], 1'b0, carry[0], Sum[1], carry[1]);
     fulladder fa2 (A[2], 1'b0, carry[1], Sum[2], carry[2]);
     fulladder fa3 (A[3], 1'b0, carry[2], Sum[3], carry[3]);
@@ -24,6 +23,6 @@ module inc16 (
     fulladder fa12 (A[12], 1'b0, carry[11], Sum[12], carry[12]);
     fulladder fa13 (A[13], 1'b0, carry[12], Sum[13], carry[13]);
     fulladder fa14 (A[14], 1'b0, carry[13], Sum[14], carry[14]);
-    fulladder fa15 (A[15], 1'b0, carry[14], Sum[15], Cout); // Carry-out final
+    fulladder fa15 (A[15], 1'b0, carry[14], Sum[15], Cout); 
 
 endmodule

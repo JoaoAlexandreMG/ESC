@@ -1,4 +1,4 @@
-`include "halfadder.v"
+`include "modules/halfadder.v"
 
 module tb_halfadder;
     reg A, B;

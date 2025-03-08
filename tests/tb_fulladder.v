@@ -1,4 +1,4 @@
-`include "fulladder.v"
+`include "modules/fulladder.v"
 
 module tb_fulladder;
     reg A, B, Cin;  

@@ -1,5 +1,5 @@
-`include "../../gates01/gxor.v"
-`include "../../gates01/gand.v"
+`include "others/gxor.v"
+`include "others/gand.v"
 
 module halfadder(
     input A, B,

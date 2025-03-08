@@ -1,6 +1,6 @@
-`include "../../gates01/gxor.v"
-`include "../../gates01/gand.v"
-`include "../../gates01/gor.v"
+`include "others/gxor.v"
+`include "others/gand.v"
+`include "others/gor.v"
 
 module fulladder(
     input A, B, Cin,

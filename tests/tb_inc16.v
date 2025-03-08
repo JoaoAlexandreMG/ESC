@@ -1,4 +1,4 @@
-`include "inc16.v"
+`include "modules/inc16.v"
 
 module tb_inc16;
     reg [15:0] A;  

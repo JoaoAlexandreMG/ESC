@@ -1,4 +1,4 @@
-`include "fulladder.v"
+`include "modules/fulladder.v"
 
 module add16 (
     input [15:0] A, B,
